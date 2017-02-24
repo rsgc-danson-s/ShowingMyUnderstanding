@@ -29,10 +29,40 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Replace this comment and add your code below...
-canvas.defaultLineWidth = 50
-//canvas.drawLine(fromX: 50, fromY: 50, toX: 250, toY: 250)
-canvas.drawLine(fromX: 100, fromY: 100, toX: 200, toY: 200, lineWidth: 50, capStyle: .roundLineCapStyle)
+
+// make blue section
+canvas.drawShapesWithFill = true
+canvas.drawShapesWithBorders = false
+canvas.fillColor = Color(hue: 190, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawEllipse(centreX: 75, centreY: 75, width: 75, height: 75)
+canvas.drawEllipse(centreX: 75, centreY: 225, width: 75, height: 75)
+canvas.defaultLineWidth = 75
+canvas.lineColor = Color(hue: 190, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawLine(fromX: 75, fromY: 115, toX: 75, toY: 190)
+canvas.drawLine(fromX: 90, fromY: 200, toX: 150, toY: 100)
+
+//make red section
+canvas.fillColor = Color(hue: 0, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawEllipse(centreX: 225, centreY: 75, width: 75, height: 75)
+canvas.drawEllipse(centreX: 225, centreY: 225, width: 75, height: 75)
+canvas.defaultLineWidth = 75
+canvas.lineColor = Color(hue: 0, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawLine(fromX: 225, fromY: 115, toX: 225, toY: 190)
+canvas.drawLine(fromX: 212, fromY: 200, toX: 163, toY: 100)
+
+//make black section
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 150, centreY: 75, width: 75, height: 75)
+canvas.lineColor = Color.black
+for x in stride(from: 112, through: 189, by: 1){
+    canvas.defaultLineWidth = 1
+    canvas.drawLine(fromX: x, fromY: 75, toX: 150, toY: 162)
+}
+/*:
+ ## Template code
+ The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
+ */
+
 
 /*:
  ## Template code
