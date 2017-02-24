@@ -28,12 +28,23 @@ import PlaygroundSupport
 let canvas = Canvas(width: 300, height: 300)
 
 // Generate a random number
-let number = random(from: 0, toButNotIncluding: 2)
+var number = random(from: 0, toButNotIncluding: 2)
 
-// Replace this comment and add your code below...
+// when the random number 1 is generated
+if number == 1 {
+    canvas.fillColor = Color.black
+    canvas.drawShapesWithFill = true
+    canvas.drawRectangle(bottomLeftX: 50, bottomLeftY: 50, width: 100, height: 100)
 
-/*:
- ## Template code
- The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
- */
-PlaygroundPage.current.liveView = canvas.imageView
+}
+
+// when the random number 0 is generated
+if number == 0 {
+    canvas.drawShapesWithFill = false
+    canvas.drawRectangle(bottomLeftX: 50, bottomLeftY: 50, width: 100, height: 100)
+}
+    /*:
+     ## Template code
+     The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
+     */
+    PlaygroundPage.current.liveView = canvas.imageView
