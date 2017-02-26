@@ -29,8 +29,17 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Replace this comment and add your code below...
-
+// create top black rectangles
+for x in stride(from: 0, through: 300, by: 51) {
+canvas.drawRectangle(bottomLeftX: x, bottomLeftY: 245, width: 24, height: 9)
+        canvas.drawRectangle(bottomLeftX: x, bottomLeftY: 145, width: 24, height: 9)
+        canvas.drawRectangle(bottomLeftX: x, bottomLeftY: 45, width: 24, height: 9)
+}
+}
+//for bottom black rectangles
+for y in stride(from: 50, through: 300, by: 50) {
+    canvas.drawRectangle(bottomLeftX: y, bottomLeftY: 200, width: 24, height: 9)
+}
 
 /*:
  ## Template code
