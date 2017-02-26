@@ -19,7 +19,16 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Replace this comment and add your code below...
+// make circles without fill
+canvas.drawShapesWithFill = false
+for x in stride(from: 0, through: 300, by: 30){
+    canvas.drawEllipse(centreX: 150, centreY: 150, width: x, height: x, borderWidth: 3)
+}
+for y in stride(from: 10, through: 300, by: 30){
+    canvas.drawEllipse(centreX: 150, centreY: 150, width: y, height: y, borderWidth: 3)
+}
+
+
 
 /*:
  ## Template code
