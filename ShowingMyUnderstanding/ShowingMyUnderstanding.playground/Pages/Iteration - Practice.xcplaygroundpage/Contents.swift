@@ -30,15 +30,18 @@ import PlaygroundSupport
 let canvas = Canvas(width: 300, height: 300)
 
 // create top black rectangles
-for x in stride(from: 0, through: 300, by: 51) {
-canvas.drawRectangle(bottomLeftX: x, bottomLeftY: 245, width: 24, height: 9)
-        canvas.drawRectangle(bottomLeftX: x, bottomLeftY: 145, width: 24, height: 9)
-        canvas.drawRectangle(bottomLeftX: x, bottomLeftY: 45, width: 24, height: 9)
+for x in stride(from: 0, through: 300, by: 51){
+for X in stride(from: 50, through: 250, by: 100){
+    canvas.drawRectangle(bottomLeftX: x, bottomLeftY: X, width: 24, height: 9)
+    }
 }
-}
+
 //for bottom black rectangles
-for y in stride(from: 50, through: 300, by: 50) {
-    canvas.drawRectangle(bottomLeftX: y, bottomLeftY: 200, width: 24, height: 9)
+for y in stride(from: 25, through: 300, by: 50){
+for Y in stride(from: 20, through: 220, by: 100){
+  canvas.drawRectangle(bottomLeftX: y, bottomLeftY: Y, width: 24, height: 9)
+
+    }
 }
 
 /*:
