@@ -21,9 +21,32 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Replace this comment and add your code below...
+// create background
+canvas.drawShapesWithFill = true
+canvas.fillColor = Color.black
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 300, height: 300)
+// Generate a random number
+var number = random(from: 0, toButNotIncluding: 2)
 
-
+// when the random number 1 is generated
+if number == 1 {
+    canvas.fillColor = Color.red
+    canvas.drawShapesWithFill = true
+    for x in stride(from: 25, through: 300, by: 60) {
+        for y in stride(from: 25, through: 300, by: 60) {
+            canvas.drawEllipse(centreX: y, centreY: x, width: 30, height: 30, borderWidth: 5)
+        }
+    }
+}
+// when the random number 0 is generated
+if number == 0 {
+    canvas.fillColor = Color.blue
+    for x in stride(from: 25, through: 300, by: 60) {
+        for y in stride(from: 25, through: 300, by: 60) {
+            canvas.drawEllipse(centreX: y, centreY: x, width: 30, height: 30, borderWidth: 5)
+        }
+    }
+}
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
