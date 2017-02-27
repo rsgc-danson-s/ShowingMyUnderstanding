@@ -20,6 +20,7 @@ import PlaygroundSupport
 let canvas = Canvas(width: 300, height: 300)
 
 // Generate a random number
+// below, line 24 is an example of a assignment statement
 var number = random(from: 0, toButNotIncluding: 3)
 
 // when the random number 1 is generated

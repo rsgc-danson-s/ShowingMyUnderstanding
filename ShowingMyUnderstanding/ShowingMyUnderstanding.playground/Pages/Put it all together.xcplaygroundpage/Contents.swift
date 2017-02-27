@@ -29,6 +29,7 @@ canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 300, height: 300)
 var number = random(from: 0, toButNotIncluding: 2)
 
 // when the random number 1 is generated
+//below, line 33 is an if statement and a comparison operator
 if number == 1 {
     canvas.fillColor = Color.red
     canvas.drawShapesWithFill = true
@@ -39,6 +40,7 @@ if number == 1 {
     }
 }
 // when the random number 0 is generated
+// below, line 48 is a variable
 if number == 0 {
     canvas.fillColor = Color.blue
     for x in stride(from: 25, through: 300, by: 60) {
